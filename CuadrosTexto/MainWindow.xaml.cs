@@ -23,6 +23,45 @@ namespace CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
+            nombreTextBox.Tag = mensajeNombreTextBlock;
+            apellidoTextBox.Tag = mensajeApellidoTextBlock;
+        }
+
+        private void TextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            TextBox mensaje = (TextBox)sender;
+
+            TextBlock ayuda = (TextBlock)mensaje.Tag;
+
+            if (e.Key == Key.F1 && ayuda.Visibility == Visibility.Hidden)
+            {
+                ayuda.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ayuda.Visibility = Visibility.Hidden;
+            }
+
+        }
+
+        private void edadTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            bool intento = int.TryParse(edadTextBox.Text, out _);
+
+            if (e.Key == Key.F2)
+            {
+                if (intento == false)
+                {
+                    errorEdadTextBlock.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorEdadTextBlock.Visibility = Visibility.Hidden;
+                }
+               
+            }
+
+
         }
     }
 }

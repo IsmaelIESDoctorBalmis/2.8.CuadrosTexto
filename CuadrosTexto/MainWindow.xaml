@@ -5,9 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CuadrosTexto"
         mc:Ignorable="d"
-        Title="Cuadros Texto" Height="450" Width="800"
+        Title="Cuadros Texto" Height="334" Width="397.468"
         Icon="assets/text.ico">
     <Grid>
-        
+
+        <TextBlock HorizontalAlignment="Left" Margin="35,41,0,0" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top"/>
+        <TextBox x:Name="nombreTextBox" Tag="" HorizontalAlignment="Left" Height="23" Margin="35,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp"/>
+        <TextBlock x:Name="mensajeNombreTextBlock" HorizontalAlignment="Left" Margin="188,69,0,0" TextWrapping="Wrap" Text="Nombre del cliente" Visibility="Hidden" VerticalAlignment="Top" Foreground="#FF7E7575"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="35,111,0,0" TextWrapping="Wrap" Text="Apellido:" VerticalAlignment="Top"/>
+        <TextBox x:Name="apellidoTextBox" Tag="" HorizontalAlignment="Left" Height="23" Margin="35,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="TextBox_KeyUp"/>
+        <TextBlock x:Name="mensajeApellidoTextBlock" HorizontalAlignment="Left" Margin="188,142,0,0" TextWrapping="Wrap" Text="Apellido del cliente" Visibility="Hidden" VerticalAlignment="Top" Foreground="#FF7E7575"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="35,186,0,0" TextWrapping="Wrap" Text="Edad:" VerticalAlignment="Top"/>
+        <TextBox x:Name="edadTextBox" Tag="" HorizontalAlignment="Left" Height="23" Margin="35,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="edadTextBox_KeyUp"/>
+
+        <TextBlock x:Name="errorEdadTextBlock" HorizontalAlignment="Left" Visibility="Hidden" Margin="188,214,0,0" TextWrapping="Wrap" Text="Edad incorrecta" VerticalAlignment="Top" Foreground="#FFFD0F0F"/>
+
+
     </Grid>
 </Window>
