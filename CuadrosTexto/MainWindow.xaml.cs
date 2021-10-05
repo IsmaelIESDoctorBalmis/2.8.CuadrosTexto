@@ -37,7 +37,7 @@ namespace CuadrosTexto
             {
                 ayuda.Visibility = Visibility.Visible;
             }
-            else
+            else if(e.Key == Key.F1)
             {
                 ayuda.Visibility = Visibility.Hidden;
             }
